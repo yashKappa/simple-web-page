@@ -13,6 +13,7 @@ nav{
     padding: 0px 100px;
     position: fixed;
     background-color: bisque;
+    font-family:Arial, Helvetica, sans-serif;
 }
 nav .logo p{
     font-size: 30px;
@@ -41,14 +42,16 @@ nav li a{
 }
 
 nav li a:hover{
-    color:rgb(114, 106, 106);
+    color:rgb(32, 26, 26);
     transition: all 0.2s ease 0s;
     text-decoration: none;
+    font-weight:600;
 }
 
 .menu{
     padding-left: 35rem;
 }
+
 
 .content img{
     width: 100%;
