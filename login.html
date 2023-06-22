@@ -16,21 +16,21 @@
 
         <div class="top">
             <span>Have an account?</span>
-            <header>Login</header>
+            <header>User Login</header>
         </div>
 
         <div class="input-field">
-            <input type="text" class="input" placeholder="Username" id="">
+            <input type="text" class="input" placeholder="Username" id="name">
             <i class='bx bx-user' ></i>
         </div>
 
         <div class="input-field">
-            <input type="Password" class="input" placeholder="Password" id="">
+            <input type="Password" class="input" placeholder="Password" id="password">
             <i class='bx bx-lock-alt'></i>
         </div>
 
         <div class="input-field">
-            <input type="submit" class="submit" value="Login" id="">
+            <input type="submit" class="submit" value="Login" id="" onclick="auth()">
         </div>
 
         <div class="two-col">
@@ -44,7 +44,16 @@
         </div>
     </div>
 </div>  
-
+<script>
+    function auth(){
+    var name = document.getElementById("name").value;
+    var password = document.getElementById("password").value;
+    if(name == "Admin" && password == "1234"){
+        window.location.assign("userpanal.html");
+        alert("login sucessfully");
+    }
+}
+</script>
 <style>
     /*login page*/
 
@@ -70,7 +79,9 @@ body{
     width: 350px;
     display: flex;
     flex-direction: column;
-    padding: 0 15px 0 15px;
+    border-radius: 20px;
+    padding: 18px 18px 18px 18px;
+    background: linear-gradient(135deg, #fe0000b0, #ff7b00b7, rgba(0, 0, 255, 0.671));
     
 }
 span{
@@ -116,13 +127,14 @@ i{
     outline: none;
     width: 100%;
     color: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.158);
+    background: rgba(255, 0, 34, 0.158);
     cursor: pointer;
     transition: .3s ;
     font-weight: 900;
 }
 .submit:hover{
     box-shadow: 1px 5px 7px 1px rgb(0, 0, 0);
+    background-color: rgba(167, 10, 10, 0.397);
 }
 .two-col{
     display: flex;
