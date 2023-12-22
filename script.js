@@ -9,3 +9,13 @@
           modal.style.display = "none";
       }
   }
+
+  const sql = require("mssql/msnodesqlv8");
+var config = {
+    server : "DESKTOP-2TC9IM9\\SQLEXPRESS",
+    database : "duplicate",
+    driver : "msnodesqlv8",
+    option:{
+        trustedConnection:true
+    }
+}
