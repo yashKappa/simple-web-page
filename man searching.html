@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide Page Transition</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="page" id="page1">
+            <h1>Page 1 Content</h1>
+            <button onclick="navigateToPage('page2')">Go to Page 2</button>
+        </div>
+
+        <div class="page" id="page2">
+            <h1>Page 2 Content</h1>
+            <button onclick="navigateToPage('page1')">Go to Page 1</button>
+        </div>
+    </div>
+
+    <script>
+        function navigateToPage(pageId) {
+            const currentPage = document.querySelector('.page.active');
+            const nextPage = document.getElementById(pageId);
+
+            currentPage.classList.remove('active');
+            nextPage.classList.add('active');
+        }
+    </script>
+</body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+    }
+    
+    .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    .page {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f0f0f0;
+        transform: translateX(10%);
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .page.active {
+        transform: translateX(0);
+    }
+    
+    @keyframes slideTransition {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+    
+</style>
+</html>
