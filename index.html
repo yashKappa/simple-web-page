@@ -1,76 +1,60 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Ram society management system</title>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script name="viewport" content="width=device-width, initial-scale=1"></script>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design & Development Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-  <!--navbar-->
-     <nav>
-            <div class="logo">  
-           <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfmiAIftqNx2YS2h_oZ8xM3RiNB-q4jyVHCg&usqp=CAU">ram society</p>
-           </div>
-            <ul>
-            <li><a href="user login.html">Login</a></li>
-          </ul>
-          <div class="menu">
-          <li><a class="Active" href="#Home">Home</a></li>
-            <li><a href="Rent/Buy.html">Rent/Buy</a></li>
-            <li><a href="about us.html">about us</a></li>
-            <li><a href="feedback.html">feedback</a></li>
-          </div>
-          
-     </nav>
+    <header>
+        <nav>
+            <div class="logo">PraRoz<span class="moon">🌕</span></div>
+            <ul class="nav-links">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">DESIGN</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" placeholder="Type to Search">
+                <button>Search</button>
+            </div>
+        </nav>
+    </header>
 
-     <!--navbar-->
-
-     <br><br><br><div class="slides-box">
- 
-      <div class="slider">
-          <div class="slides">
-              <div class="slide first" id="first">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYHpR7kiGN6e29Mf0TYgrvQ_WQ_-6aOzfpKw&usqp=CAU" alt="" >
-
-              </div>
-              
-              <div class="slide second">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNZR0QpuDVI80hAlvncsylWfoyThhOWHo3tA&usqp=CAU" alt="" >
-
-              </div>
-              <div class="slide third">
-                  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTwhC4HF80_ZcWormVR_02xdq2ES7Om3G3Yw&usqp=CAU" alt=""> 
-
-              </div>
-          </div>
-      </div>
-
-</div>
-
-     <div class="footer">
-      <li><p class="fo">company</p></li>
-      <li><p class="fo">about</p></li>
-      <li><p class="fo">tatamotars@gmail.com</p></li>
-      <li><p class="fo">feedback</p></li>
-
-      <div class="icon">
-        <a href="https://sanji.to/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Instagram-Icon.png/1200px-Instagram-Icon.png" ></a>
-        <a href="https://sanji.to/"><img src="https://icon-library.com/images/facebook-icon-logo-png/facebook-icon-logo-png-7.jpg" ></a>
-        <a href="https://sanji.to/"><img src="https://d2j84o4abgbvdf.cloudfront.net/img/assets/apps/twitter.png" ></a>
-        <a href="https://sanji.to/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsXkyib4Bt6g7NSRZ7KyO_unPcu4HtvkDVRQ&usqp=CAU" ></a>
-      </div>
-
-
-     </div>
-
-     <script src="script.js"></script>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Web Design & <span>Development</span> Course</h1>
+                <p>Web Design is a specialization of the design stream. They also use HTML, CSS, WYSIWYG editing software, mark up validators, etc., to create design elements.</p>
+                <button>Join Us</button>
+            </div>
+            <div class="login-container">
+                <h2>Login Here</h2>
+                <form>
+                    <div class="input-container">
+                        <input type="text" id="username" placeholder=" ">
+                        <label for="username">Username</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="password" placeholder=" ">
+                        <label for="password">Password</label>
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+                <p>Don't have an account? <a href="#">Sign up here</a></p>
+                <p>Log in with</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-google"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

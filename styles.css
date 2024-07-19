@@ -1,0 +1,276 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url('https://i.pinimg.com/originals/d7/a9/ec/d7a9ec6d80377140f2610275b6195bb6.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    overflow-y: hidden;
+}
+
+header {
+    padding: 10px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: orange;
+}
+
+.moon {
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border: 1px solid rgba(255, 166, 0, 0);
+}
+
+.nav-links li a:hover {
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid orange;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1.5px solid orange;
+    color: black;
+    margin-right: 0;
+    border-top-left-radius: 0.2rem;
+    border-bottom-left-radius: 0.2rem;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0; /* Remove margin to ensure no space between input and button */
+    border: 1.5px solid orange;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+}
+
+.search-container button:hover {
+    background-color: darkorange;
+}
+
+.search-container input:focus {
+    outline: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-top: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+}
+
+.hero-text span {
+    color: orange;
+}
+
+.hero-text p {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-text button:hover {
+    background-color: darkorange;
+}
+
+.input-container {
+    position: relative;
+    margin-top: 1rem;
+}
+
+.input-container label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+    pointer-events: none; /* Prevents label from interfering with input focus */
+    padding: 0 5px; /* Adds padding around the label */
+}
+
+.login-container input::placeholder {
+    color: transparent; /* Hide placeholder text */
+}
+
+.login-container input:focus + label,
+.login-container input:not(:placeholder-shown) + label {
+    top: -8px; /* Moves the label above the input */
+    left: 0;
+    font-size: 12px; /* Adjusts font size for the label */
+    color: orange; /* Change label color on focus */
+}
+
+.login-container {
+    background: rgba(0, 0, 0, 0.548);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 0px;
+    border-radius: 0.2rem;
+    color: orange;
+    font-size: large;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-container input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid orange;
+    color: white;
+    width: 100%;
+}
+
+.login-container input:focus {
+    outline: none;
+}
+
+.login-container button {
+    padding: 10px;
+    font-size: 18px;
+    background-color: orange;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
+}
+
+.login-container button:hover {
+    background-color: darkorange;
+}
+
+.login-container p {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.login-container a {
+    color: orange;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 2rem;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: orange;
+}
+
+/* WebKit Scrollbar */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: orange; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+    border: 3px solid rgba(0, 0, 0, 0.1); /* Adds space around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: darkorange; /* Color of the scrollbar thumb on hover */
+}
+
+/* Firefox Scrollbar */
+* {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: orange rgba(0, 0, 0, 0.1); /* Thumb color and track color */
+}
+
+/* Ensures scrollbar styling on HTML and BODY elements */
+html, body {
+    scrollbar-width: thin;
+    scrollbar-color: orange rgba(0, 0, 0, 0.1);
+}
